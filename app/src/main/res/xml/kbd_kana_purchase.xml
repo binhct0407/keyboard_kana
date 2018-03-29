@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mozc="http://schemas.android.com/apk/res-auto"
+    mozc:defaultHorizontalPadding="@fraction/keyboard_kana_default_horizontal_padding"
+    mozc:defaultIconHeight="@dimen/unlimited"
+    mozc:defaultIconWidth="@dimen/keyboard_twelvekeys_default_height"
+    mozc:defaultVerticalPadding="@fraction/keyboard_qwerty_default_vertical_padding"
+    mozc:horizontalGap="1%p"
+    mozc:keyBackground="qwertyRegular"
+    mozc:keyHeight="17%p"
+    mozc:keyHorizontalLayoutWeight="1"
+    mozc:keyWidth="15%p"
+    mozc:keyboardContentDescription="@string/cd_keyboard_kana"
+    mozc:popUpHeight="@dimen/key_preview_height"
+    mozc:popUpIconHeight="@dimen/key_preview_icon_height"
+    mozc:popUpXOffset="0dip"
+    mozc:popUpYOffset="@dimen/mini_keyboard_vertical_correction"
+    mozc:verticalGap="1%p">
+    <Row
+        mozc:keyHeight="0dip"
+        mozc:rowEdgeFlags="top"
+        mozc:verticalGap="4%p" />
+    <Row>
+        <Key mozc:keyEdgeFlags="left">
+            <KeyState mozc:contentDescription="@string/cd_key_undo">
+                <Flick>
+                    <KeyEntity
+                        mozc:iconHeight="@dimen/default_function_icon_height"
+                        mozc:iconWidth="@dimen/unlimited"
+                        mozc:keyCode="@integer/key_undo"
+                        mozc:keyIcon="@raw/twelvekeys__function__undo__icon"
+                        mozc:sourceId="@integer/key_undo" />
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_symbol_window_emoji">
+                <Flick>
+                    <KeyEntity
+                        mozc:iconHeight="@dimen/keyboard_kana_default_height"
+                        mozc:iconWidth="@dimen/keyboard_kana_default_width"
+                        mozc:keyCode="@integer/key_symbol_emoji"
+                        mozc:keyIcon="@raw/symbol__major__emoji"
+                        mozc:sourceId="2">
+                        <PopUp mozc:popUpIcon="@raw/symbol__major__emoji" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_か">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="3">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_さ">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="4">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_な">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="5">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key
+            mozc:isRepeatable="true"
+            mozc:keyEdgeFlags="right">
+            <KeyState mozc:contentDescription="@string/cd_key_uchar_backspace">
+                <Flick>
+                    <KeyEntity
+                        mozc:iconHeight="@dimen/default_function_icon_height"
+                        mozc:iconWidth="@dimen/unlimited"
+                        mozc:keyCode="@integer/uchar_backspace"
+                        mozc:keyIcon="@raw/twelvekeys__function__delete__icon"
+                        mozc:sourceId="6" />
+                </Flick>
+            </KeyState>
+        </Key>
+    </Row>
+    <Row
+        mozc:keyHeight="0dip"
+        mozc:rowEdgeFlags="top"
+        mozc:verticalGap="1%p" />
+
+    <Row>
+        <Key
+            mozc:isRepeatable="true"
+            mozc:keyEdgeFlags="left">
+            <KeyState mozc:contentDescription="@string/cd_key_right">
+                <Flick>
+                    <KeyEntity
+                        mozc:iconHeight="@dimen/default_function_icon_height"
+                        mozc:iconWidth="@dimen/unlimited"
+                        mozc:keyCode="@integer/key_right"
+                        mozc:keyIcon="@raw/twelvekeys__function__right_arrow__icon"
+                        mozc:sourceId="7" />
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ば">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="8">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_わ">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="9">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_た">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_latin_small_letter_a"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="10">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_さ">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="11">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key mozc:keyEdgeFlags="right">
+            <KeyState mozc:contentDescription="@string/cd_key_uchar_backspace">
+                <Flick>
+                    <KeyEntity
+                        mozc:iconHeight="@dimen/default_function_icon_height"
+                        mozc:iconWidth="@dimen/unlimited"
+                        mozc:keyCode="@integer/uchar_backspace"
+                        mozc:keyIcon="@raw/twelvekeys__function__delete__icon"
+                        mozc:sourceId="12" />
+                </Flick>
+            </KeyState>
+        </Key>
+    </Row>
+
+    <Row
+        mozc:keyHeight="0dip"
+        mozc:rowEdgeFlags="top"
+        mozc:verticalGap="1%p" />
+
+    <Row>
+        <Key
+            mozc:isRepeatable="true"
+            mozc:keyEdgeFlags="left">
+            <KeyState mozc:contentDescription="@string/cd_key_right">
+                <Flick>
+                    <KeyEntity
+                        mozc:iconHeight="@dimen/default_function_icon_height"
+                        mozc:iconWidth="@dimen/unlimited"
+                        mozc:keyCode="@integer/key_right"
+                        mozc:keyIcon="@raw/twelvekeys__function__right_arrow__icon"
+                        mozc:sourceId="13" />
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ば">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="14">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_た">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="15">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_な">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_latin_small_letter_a"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="16">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_は">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="17">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key mozc:keyEdgeFlags="right">
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_空白">
+                <Flick>
+                    <KeyEntity
+                        mozc:keyCode="@integer/key_undo"
+                        mozc:keyIcon="@raw/twelvekeys__function__undo__icon"
+                        mozc:sourceId="18" />
+                </Flick>
+            </KeyState>
+        </Key>
+    </Row>
+    <Row
+        mozc:keyHeight="0dip"
+        mozc:rowEdgeFlags="top"
+        mozc:verticalGap="1%p" />
+    <Row>
+        <Key mozc:keyEdgeFlags="left">
+            <KeyState
+                mozc:contentDescription="@string/cd_key_shift"
+                mozc:nextMetaState="shift">
+                <Flick>
+                    <KeyEntity
+                        mozc:keyCode="@integer/key_capslock"
+                        mozc:keyIcon="@raw/qwerty__shift_off"
+                        mozc:sourceId="19" />
+                </Flick>
+            </KeyState>
+
+            <KeyState
+                mozc:contentDescription="@string/cd_key_capslock"
+                mozc:metaState="shift"
+                mozc:nextMetaState="capsLock"
+                mozc:nextRemovedMetaStates="shift">
+                <Flick>
+                    <KeyEntity
+                        mozc:keyCode="@integer/key_capslock"
+                        mozc:keyIcon="@raw/qwerty__shift_on"
+                        mozc:sourceId="20" />
+                </Flick>
+            </KeyState>
+            <KeyState
+                mozc:contentDescription="@string/cd_key_capsunlock"
+                mozc:metaState="capsLock"
+                mozc:nextRemovedMetaStates="capsLock">
+                <Flick>
+                    <KeyEntity
+                        mozc:keyCode="@integer/key_capslock"
+                        mozc:keyIcon="@raw/qwerty__caps_on"
+                        mozc:sourceId="21" />
+                </Flick>
+            </KeyState>
+        </Key>
+        <!--<Key>-->
+        <!--<KeyState mozc:contentDescription="@string/cd_key_kana_line_小あ">-->
+        <!--<Flick>-->
+        <!--<KeyEntity-->
+        <!--mozc:flickHighlight="true"-->
+        <!--mozc:keyCode="@integer/uchar_digit_one"-->
+        <!--mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"-->
+        <!--mozc:sourceId="19">-->
+        <!--<PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />-->
+        <!--</KeyEntity>-->
+        <!--</Flick>-->
+        <!--</KeyState>-->
+        <!--</Key>-->
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_小あ">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="22">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ま">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="24">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_や">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="25">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="26">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key
+            mozc:keyHeight="36%p"
+            mozc:keyWidth="15%p">
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="27">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+    </Row>
+    <Row
+        mozc:keyHeight="0dip"
+        mozc:rowEdgeFlags="top"
+        mozc:verticalGap="1%p" />
+    <Row mozc:rowEdgeFlags="top">
+        <Key mozc:keyWidth="7%p">
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="28">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key mozc:keyWidth="7%p">
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="40">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="29">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyCode="@integer/uchar_digit_one"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="30">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="31">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Key>
+            <KeyState mozc:contentDescription="@string/cd_key_kana_line_ら">
+                <Flick>
+                    <KeyEntity
+                        mozc:flickHighlight="true"
+                        mozc:keyIcon="@raw/twelvekeys__kana__support__01_center"
+                        mozc:sourceId="32">
+                        <PopUp mozc:popUpIcon="@raw/twelvekeys__kana__support__popup__01" />
+                    </KeyEntity>
+                </Flick>
+            </KeyState>
+        </Key>
+        <Spacer
+            mozc:keyBackground="transparent"
+            mozc:keyHorizontalLayoutWeight="0"
+            mozc:keyWidth="1dp" />
+        <Spacer
+            mozc:keyBackground="transparent"
+            mozc:keyHorizontalLayoutWeight="1" />
+    </Row>
+</Keyboard>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.nvstudio.input">
+
+    <!-- Google Japanese Input (the main code) requires the following permissions. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/application_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="org.mozc.android.inputmethod.japanese.LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="org.mozc.android.inputmethod.japanese.preference.MozcProxyPreferenceActivity" />
+        <activity android:name="org.mozc.android.inputmethod.japanese.preference.MozcFragmentPreferenceActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/AppThemeSelectorSettings"/>
+        <activity android:name="org.mozc.android.inputmethod.japanese.preference.MozcFragmentSoftwareKeyboardAdvancedSettingsPreferenceActivity"
+                  android:launchMode="singleTop"
+                  android:theme="@style/AppThemeSelectorSettings"/>
+
+        <activity android:name="org.mozc.android.inputmethod.japanese.FirstTimeLaunchActivity" />
+        <activity android:name="org.mozc.android.inputmethod.japanese.preference.MiniBrowserActivity"
+                  android:launchMode="singleTop" />
+
+        <!-- User dictionary tool -->
+        <activity android:name="org.mozc.android.inputmethod.japanese.userdictionary.UserDictionaryToolActivity"
+                  android:label="@string/user_dictionary_tool_app_name"
+                  android:uiOptions="splitActionBarWhenNarrow"
+                  android:configChanges="orientation|screenSize"
+                  android:theme="@style/AppThemeSelectorSettings">
+
+            <!-- Intent filters to receive a file-sending intent for importing user dictionary data.
+                 UserDictionaryToolActivity accepts only file scheme.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/zip" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+
+        <!-- TODO(matsuzakit): Use @string/user_dictionary_tool_export_provider_name for name and authorities.
+             Currently resource reference is not used as it is not supported on API Level 7 (Eclair). -->
+        <provider android:name="org.mozc.android.inputmethod.japanese.userdictionary.UserDictionaryExportProvider"
+                  android:authorities="org.mozc.android.inputmethod.japanese.userdictionary.UserDictionaryExportProvider"
+                  android:exported="false"
+                  android:grantUriPermissions="true"/>
+
+        <!-- For mushroom.
+             Note about the attributes:
+             - launchMode: this activity is singleTask, in order to be the root
+               activity launched from the menu dialog.
+             - taskAffinity: set taskAffinity so that the task is split from
+               other activities, such as preference activity.
+             - windowSoftInputMode: because this activity looks dialog with a
+               ListView. So, in theory it is not necessary to connect with IME.
+               Without this option, some unexpected connection happens, and
+               it causes an issue that mushroom result is not committed.
+             - excludeFromRecents: this pseudo dialog shouldn't be shown on history
+               list.
+        -->
+        <activity android:name="org.mozc.android.inputmethod.japanese.mushroom.MushroomSelectionActivity"
+                  android:launchMode="singleTask"
+                  android:taskAffinity=".mushroom"
+                  android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:excludeFromRecents="true" />
+
+
+        <!-- Input device manager -->
+        <receiver android:name="org.mozc.android.inputmethod.japanese.InputDeviceReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS" />
+            </intent-filter>
+            <meta-data android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS"
+                       android:resource="@xml/keyboard_layouts" />
+        </receiver>
+
+        <!-- Following entry is for unit tests. Do not remove. -->
+        <!-- The activity is used for testing views. -->
+        <activity android:name="android.app.Activity" />
+
+        <service android:name="org.mozc.android.inputmethod.japanese.MozcService"
+                 android:permission="android.permission.BIND_INPUT_METHOD"
+                 android:label="@string/app_full_name">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method" />
+        </service>
+
+    </application>
+
+</manifest>
